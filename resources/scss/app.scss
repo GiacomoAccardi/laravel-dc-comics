@@ -10,12 +10,12 @@
     height: 400px;
 }
 
-.comic-thumb {
-    width: 200px;
-    height: 200px;
+.comic-card {
 
     img {
-        height: 180px;
-        width: 90%;
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+
     }
 }
