@@ -6,12 +6,14 @@
             <div class="row my-5">
                 @foreach ($comics as $comic)
                     <div class="col-3">
-                        <div class="comic-card text-white d-flex flex-column align-items-center">
-                            <div class="thumb">
-                                <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
+                        <a class="text-decoration-none" href="{{ route('comics.show', ['comic' => $comic->id]) }}">
+                            <div class="comic-card text-white d-flex flex-column align-items-center">
+                                <div class="thumb">
+                                    <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
+                                </div>
+                                <h5 class="my-5">{{ $comic['title'] }}</h5>
                             </div>
-                            <h5 class="my-5">{{ $comic['title'] }}</h5>
-                        </div>
+                        </a>
                     </div>
                 @endforeach
             </div>
